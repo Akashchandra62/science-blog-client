@@ -10,7 +10,7 @@ const Login = () => {
     const [password, setPassword] = useState('')
 
     const handleSubmit = async (e) => {
-        await axios.post("http://localhost:8080/login", {email, password});
+        await axios.post("https://science-blog.onrender.com/login", {email, password});
         localStorage.setItem('email', email);
         navigate('/all-experiments')
     }

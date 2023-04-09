@@ -43,7 +43,7 @@ const CreateExperiment = () => {
     step: "",
   });
   const fetchCoreData = async () => {
-    const res = await axios.post("http://localhost:8080/data")
+    const res = await axios.post("https://science-blog.onrender.com/data")
     setSubject(res.data.data.Subject);
     setCategory(res.data.data.Category);
     return;
@@ -83,7 +83,7 @@ const CreateExperiment = () => {
         list["imgUrl"] = newUrl;
       }
     });
-    const res = await axios.post("http://localhost:8080", { form });
+    const res = await axios.post("https://science-blog.onrender.com", { form });
     alert("Experiment created successfully");
     navigate("/all-experiments");
   };

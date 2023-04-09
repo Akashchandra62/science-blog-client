@@ -9,12 +9,12 @@ const AllExperiments = () => {
   const [subject, setSubject] = useState([]);
 
   const fetchData = async () => {
-    let res = await axios.get(`http://localhost:8080?filter=${filter}`);
+    let res = await axios.get(`https://science-blog.onrender.com?filter=${filter}`);
     setAllExperiments(res.data.data);
   };
 
   const fetchCoreData = async () => {
-    const res = await axios.post(`http://localhost:8080/data`)
+    const res = await axios.post(`https://science-blog.onrender.com/data`)
     setSubject(res.data.data.Subject);
     return;
   }

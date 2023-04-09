@@ -8,7 +8,7 @@ const CoreData = () => {
 
     const handleSubmit = async (type, value) => {
         if(value === "") return alert("Enter Value to Add")
-        const result = await axios.post("http://localhost:8080/add-data" , {
+        const result = await axios.post("https://science-blog.onrender.com/add-data" , {
             type,
             value
         })

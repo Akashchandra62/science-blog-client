@@ -17,7 +17,7 @@ const IndividualExperiment = () => {
   const { id } = useParams()
 
   const fetchData = async () => {
-    let res = await axios.get(`http://localhost:8080/${id}`);
+    let res = await axios.get(`https://science-blog.onrender.com/${id}`);
     setExperiment(res.data.data);
   };
 
